@@ -1,0 +1,195 @@
+{
+  "titulo": "Rebe Bustamante — Cultura Organizacional y Liderazgo Consciente",
+  "descripcion": "Rebe Bustamante — Especialista en desarrollo de Cultura Organizacional y liderazgo consciente y transformacional. Conferencias, capacitación corporativa, desarrollo de liderazgo y consultoría organizacional.",
+  "imagen_compartir": "",
+  "secciones": [
+    {
+      "_block": "portada",
+      "etiqueta": "Conferencista internacional · Cultura organizacional",
+      "titulo": "Rebe Bustamante",
+      "subtitulo": "Especialista en desarrollo Humano, Cultura Organizacional y liderazgo consciente y transformacional.",
+      "frase": "«Todo lo que necesitas ya está dentro de ti.»",
+      "botones": [
+        { "texto": "Agendemos una conversación", "enlace": "#contacto", "estilo": "dorado", "nueva_pestana": false }
+      ],
+      "imagen": "/assets/rebe-bw.jpg",
+      "imagen_texto": "Rebe Bustamante",
+      "enfoque": ""
+    },
+    {
+      "_block": "manifiesto",
+      "ancla": "",
+      "etiqueta": "Manifiesto",
+      "cita": "«He visto organizaciones obsesionadas con indicadores, metas, resultados, ventas, cumplimiento, rentabilidad y eficiencia, pero incapaces de mirar con profundidad a las personas que sostienen esos números. He visto líderes hablar de cultura mientras su gente se quiebra en silencio… Y cada vez que veo eso, recuerdo: ningún resultado vale la pérdida de humanidad.»",
+      "cita_autor": "Rebe Bustamante",
+      "titulo": "No vine a este mundo a encajar.\nVine a *recordar.*",
+      "texto": "<p>A recordar que dentro de cada ser humano habita una grandeza que no necesita ser creada… solo reconocida.</p><p>Creo en los procesos. En los días luminosos… y en los que duelen. En las pausas que incomodan… y en las reconstrucciones que transforman. Porque es ahí, justo ahí, donde ocurre la verdadera magia: cuando dejas de huir de tu historia… y decides honrarla.</p><p>No represento la perfección. Represento la verdad. La verdad de caer… y levantarse con más conciencia. La verdad de sentir… y convertirlo en propósito. La verdad de liderar… sin dejar de ser humano.</p>",
+      "destacado_titulo": "Mi voz no busca impresionar. Busca despertar.",
+      "destacado": "<ul><li>Despertar <strong>líderes</strong> que ya no quieran dirigir desde el ego, sino impactar desde el alma.</li><li>Despertar <strong>organizaciones</strong> que entiendan que las personas no son recursos… son universos.</li><li>Despertar <strong>corazones</strong> que han olvidado su poder… y están listos para recuperarlo.</li></ul>",
+      "texto_final": "<p>Mi marca no es solo un nombre. Es un símbolo. Un símbolo de permiso: para sentir, para reinventarte, para evolucionar sin culpa. Porque cuando eliges honrar tu proceso, dejas de sobrevivir… y comienzas a trascender.</p><p>Y si mi historia logra tocar la tuya, si mi voz logra encender una chispa en tu interior… entonces mi propósito está cumplido.</p>",
+      "cierre": "Porque no vine a cambiar el mundo… vine a recordarte que tú puedes hacerlo.",
+      "imagenes": ["/assets/rebe-2.jpg", "/assets/rebe-1.jpg", "/assets/rebe-3.jpg"],
+      "imagen_texto": "Rebe Bustamante"
+    },
+    {
+      "_block": "imagen_lateral",
+      "ancla": "quien-es",
+      "etiqueta": "Quién es",
+      "titulo": "Empresaria. Conferencista internacional. Especialista en cultura organizacional.",
+      "texto": "<p>Rebe Bustamante ha dedicado más de veinte años a un mismo propósito: ayudar a las empresas a crecer sin deshumanizarse. Desde la dirección de talento humano hasta el escenario de una conferencia, su trabajo acompaña a líderes y organizaciones de toda Latinoamérica a construir culturas donde los resultados y las personas crecen juntos, no a costa el uno del otro.</p><p>Su mirada nace de una convicción exigente: las organizaciones no se transforman desde el organigrama, sino desde la conciencia de quienes las lideran. Por eso une el rigor de la gestión (procesos, métricas, estrategia) con una pregunta que pocos se atreven a hacer en la sala de juntas: <em>¿cómo está realmente la gente detrás de los números?</em></p><p>Habla con la autoridad de quien ha estado al frente de equipos y empresas, y con la cercanía de quien entiende que cada líder carga su propia historia. Su mensaje no es teoría motivacional: es una invitación, serena y firme, a liderar desde la verdad.</p>",
+      "cita": "«Nadie puede liderar a otros si primero no aprende a liderarse a sí mismo.»",
+      "imagen": "/assets/rebe-pink.jpg",
+      "enfoque": "center 20%",
+      "lado": "izquierda",
+      "fondo": "alterno",
+      "botones": []
+    },
+    {
+      "_block": "servicios",
+      "ancla": "que-hace",
+      "etiqueta": "Qué hace",
+      "titulo": "Transformación con resultados y con alma",
+      "intro": "Rebe diseña y acompaña experiencias de transformación para organizaciones que quieren evolucionar sin perder su humanidad. Del escenario a la sala de juntas, cada formato persigue lo mismo: líderes más conscientes, equipos más sanos y resultados que se sostienen en el tiempo.",
+      "numerar": true,
+      "tarjetas": [
+        { "titulo": "Conferencias", "texto": "Keynotes para audiencias ejecutivas que mueven la perspectiva: del indicador a la persona, del cargo al liderazgo consciente.", "enlace": "", "texto_enlace": "" },
+        { "titulo": "Capacitación corporativa", "texto": "Programas a la medida que convierten la cultura deseada en prácticas reales de equipo, sostenibles en el tiempo.", "enlace": "", "texto_enlace": "" },
+        { "titulo": "Desarrollo de liderazgo", "texto": "Procesos para que cada líder dirija con claridad, coherencia y humanidad, sin perderse a sí mismo en el camino.", "enlace": "", "texto_enlace": "" },
+        { "titulo": "Consultoría organizacional", "texto": "Diagnóstico y acompañamiento para alinear cultura, talento y estrategia al servicio de los resultados.", "enlace": "", "texto_enlace": "" }
+      ],
+      "frase_hilo": "Y como hilo conductor de todo: el desarrollo humano y personal.",
+      "filosofia_titulo": "Una empresa con alma",
+      "filosofia_citas": [
+        "«Una empresa con alma no es una empresa débil… Es una empresa que entiende que los resultados sostenibles nacen de personas cuidadas, escuchadas, bien lideradas y tratadas con dignidad… donde el liderazgo no se esconde detrás del cargo, sino que aprende a mirar a los ojos, a escuchar, a corregir sin destruir, a exigir sin humillar…»",
+        "«¿De qué sirve tener una agenda impecable si el alma está desordenada?… El éxito con alma nos obliga a revisar la coherencia: ¿lo que estoy construyendo afuera está honrando o traicionando lo que digo valorar adentro?»"
+      ],
+      "nota": "<p>Su experiencia se complementa con servicios organizacionales y de talento humano (psicometría, assessment center, team building, clima organizacional, administración de nóminas y formación corporativa) como Country Manager de <a href=\"https://psicowebcr.com\" target=\"_blank\" rel=\"noopener\">Psicoweb Costa Rica</a> y CEO-consultora de GTI Gestionadora de Talento Integral y el Centro de Capacitación Corporativo.</p>",
+      "imagen": "/assets/rebe-quehace.jpg",
+      "imagen_texto": "Rebe Bustamante impartiendo una capacitación",
+      "fondo": "normal"
+    },
+    {
+      "_block": "frase",
+      "frase": "«Las personas no son recursos, son universos, y nuestra propia vida también merece ser tratada como un universo sagrado.»",
+      "autor": "",
+      "imagen": "/assets/atmos-navy.jpg",
+      "enfoque": ""
+    },
+    {
+      "_block": "metodo",
+      "ancla": "programas",
+      "etiqueta": "Taller transformacional",
+      "titulo": "La Ruta M.A.R.I.P.O.S.A",
+      "intro": "Una metodología propia de transformación, en ocho movimientos. Como la oruga, que no mejora sino que se transforma, esta ruta acompaña a personas, líderes y equipos a soltar lo que ya no sostiene y a reconocer la identidad, el propósito y la responsabilidad que nacen después del proceso.",
+      "pasos": [
+        { "letra": "M", "titulo": "Mirar el desierto", "texto": "El punto de partida: reconocer esos dolores que cargamos." },
+        { "letra": "A", "titulo": "Aceptar la herida", "texto": "Aceptar que tenemos heridas. No se niega que duele." },
+        { "letra": "R", "titulo": "Reconocer la máscara", "texto": "Identificar la versión que se construyó para sobrevivir." },
+        { "letra": "I", "titulo": "Identificar el mensaje que creíste", "texto": "Descubrir qué mentira empezó a gobernar tu identidad." },
+        { "letra": "P", "titulo": "Ponerle nombre al proceso", "texto": "Resignificar la historia desde una conciencia más profunda." },
+        { "letra": "O", "titulo": "Ordenar lo que debo soltar", "texto": "Escribir lo que ya no puede seguir viviendo atrapado dentro." },
+        { "letra": "S", "titulo": "Soltar sin negar la historia", "texto": "Honrar lo vivido sin permitir que siga decidiendo por ti." },
+        { "letra": "A", "titulo": "Alzar las alas", "texto": "Reconocer qué identidad, propósito y responsabilidad nacen después del proceso." }
+      ],
+      "botones": [],
+      "fondo": "alterno"
+    },
+    {
+      "_block": "frase",
+      "frase": "«Una vida con propósito no se mide por cuántas personas te miran, sino por cuántas vidas puedes tocar sin olvidar quién eres, de dónde vienes y a quién perteneces.»",
+      "autor": "",
+      "imagen": "/assets/atmos-navy.jpg",
+      "enfoque": "center 70%"
+    },
+    {
+      "_block": "trayectoria",
+      "ancla": "trayectoria",
+      "etiqueta": "Trayectoria",
+      "titulo": "La experiencia detrás del mensaje",
+      "cifras": [
+        { "numero": "20+", "descripcion": "años en gestión de Recursos Humanos" },
+        { "numero": "500+", "descripcion": "empresas capacitadas a lo largo de los años" },
+        { "numero": "15+", "descripcion": "países de Latinoamérica con conferencias impartidas: México, Costa Rica, Panamá, Ecuador, Colombia, Perú, entre otros" }
+      ],
+      "linea_referencias": "Referencias comerciales a nivel nacional e internacional.",
+      "cita": "«Mi recorrido profesional me enseñó que las organizaciones también tienen heridas, que los equipos también cargan dolores, que los líderes también pueden dirigir desde sus vacíos si nunca se han detenido a revisar su propia historia.»",
+      "imagen": "/assets/rebe-icsf.jpg",
+      "imagen_texto": "Rebe Bustamante — Miembro acreditado International Coaching & Speaker Federation (ICSF-CR-085)",
+      "credenciales_titulo": "Credenciales",
+      "credenciales": "<ul><li>Licenciada en Administración de Recursos Humanos</li><li>Certificada en pruebas psicométricas, Universidad del Valle de México</li><li>Certificada en <a href=\"https://cursos.gticr.net\" target=\"_blank\" rel=\"noopener\">Metodología y Cultura Disney</a></li><li>Country Manager de <a href=\"https://psicowebcr.com\" target=\"_blank\" rel=\"noopener\">Psicoweb Costa Rica</a> (desde 2013)</li><li>CEO-consultora de GTI Gestionadora de Talento Integral y el Centro de Capacitación Corporativo</li><li>Miembro directivo de la Asociación Costarricense de Gestores de Recursos Humanos (2015–2017)</li><li>Estudiante avanzada de Derecho (Corporativo, Laboral, Propiedad Intelectual y Familia)</li></ul>",
+      "acreditacion_org": "International Coaching & Speaker Federation",
+      "acreditacion_titulos": "Miembro acreditado · Leader/Master Speaker · Líder de Líderes · Conferencista Transformacional",
+      "fondo": "normal"
+    },
+    {
+      "_block": "galeria",
+      "ancla": "galeria",
+      "etiqueta": "En escena",
+      "titulo": "Conferencias por toda Latinoamérica",
+      "fotos": [
+        { "imagen": "/assets/conf-1.jpg", "descripcion": "Rebe Bustamante en conferencia", "enfoque": "center 20%" },
+        { "imagen": "/assets/conf-2.jpg", "descripcion": "Rebe Bustamante impartiendo charla", "enfoque": "left center" },
+        { "imagen": "/assets/conf-3.jpg", "descripcion": "Rebe Bustamante en podio", "enfoque": "center 30%" },
+        { "imagen": "/assets/conf-4.jpg", "descripcion": "Rebe Bustamante con micrófono en conferencia", "enfoque": "center 20%" }
+      ],
+      "fondo": "alterno"
+    },
+    {
+      "_block": "reconocimientos",
+      "ancla": "medios",
+      "etiqueta": "Reconocimientos",
+      "titulo": "Cómo se le ha visto",
+      "items": [
+        { "tipo": "Podcast", "nombre": "«Entre Llamadas y Abrazos»", "enlace": "", "logo": "" },
+        { "tipo": "Programa de TV", "nombre": "«Panorama RH — Recursos Humanos TV»", "enlace": "", "logo": "" },
+        { "tipo": "Autora", "nombre": "«Bendito Desierto»", "enlace": "", "logo": "" },
+        { "tipo": "Acreditación", "nombre": "International Coaching & Speaker Federation", "enlace": "", "logo": "" }
+      ],
+      "fondo": "alterno"
+    },
+    {
+      "_block": "texto_con_imagen",
+      "ancla": "libro",
+      "etiqueta": "El libro",
+      "titulo": "Bendito Desierto",
+      "texto": "<p>Un recorrido por los desiertos que nos forman: las temporadas que parecen quitarlo todo y terminan revelando lo esencial, para la vida y para el liderazgo.</p>",
+      "cita": "«Lo que ayer fue tu mayor debilidad hoy es tu mayor fortaleza.»",
+      "imagen": "/assets/bendito-desierto.jpg",
+      "imagen_texto": "Portada del libro Bendito Desierto de Rebe Bustamante",
+      "estilo_imagen": "portada",
+      "lado": "derecha",
+      "botones": [],
+      "fondo": "normal"
+    },
+    {
+      "_block": "testimonios",
+      "ancla": "testimonios",
+      "etiqueta": "Testimonios",
+      "titulo": "Lo que dicen quienes la han vivido",
+      "intro": "Voces reales de personas y organizaciones que han trabajado con Rebe.",
+      "portada": "/assets/logo-rebe-light.png",
+      "videos": [
+        { "video": "/assets/testimonio-1b.mp4", "enlace": "", "descripcion": "Testimonio en video", "portada": "" },
+        { "video": "/assets/testimonio-2b.mp4", "enlace": "", "descripcion": "Testimonio en video", "portada": "" },
+        { "video": "/assets/testimonio-3b.mp4", "enlace": "", "descripcion": "Testimonio en video", "portada": "" }
+      ],
+      "escritos": [],
+      "fondo": "alterno"
+    },
+    {
+      "_block": "contacto",
+      "ancla": "contacto",
+      "imagen": "/assets/rebe-4.jpg",
+      "enfoque": "center 20%",
+      "cita": "«¿Esto me está haciendo más humana o solo más exitosa? Si lo que construyo me permite servir mejor, amar mejor, liderar mejor y vivir con más conciencia, entonces estoy aprendiendo a habitar una plenitud que no necesita aplausos para tener valor.»",
+      "titulo": "Agendemos una conversación",
+      "intro": "Si su organización está lista para resultados que no sacrifiquen lo humano, hablemos.",
+      "whatsapp": "+506 8751-7643",
+      "whatsapp_texto": "Escribir por WhatsApp",
+      "whatsapp_mensaje": "",
+      "correo": "rbustamante@gticr.net",
+      "correo_texto": "Enviar un correo",
+      "detalle": "rbustamante@gticr.net · +506 8751-7643"
+    }
+  ]
+}

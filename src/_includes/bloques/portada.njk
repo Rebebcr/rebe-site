@@ -1,0 +1,24 @@
+{%- import "macros.njk" as m %}
+  <section class="hero"{{ m.id(b) }}>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        {%- if b.etiqueta %}
+        <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+        {%- endif %}
+        <h1 class="reveal">{{ b.titulo | titulo | safe }}</h1>
+        <div class="gold-line draw"></div>
+        {%- if b.subtitulo %}
+        <p class="hero-positioning reveal">{{ b.subtitulo }}</p>
+        {%- endif %}
+        {%- if b.frase %}
+        <p class="hero-sub serif-italic reveal">{{ b.frase }}</p>
+        {%- endif %}
+        {{ m.botones(b.botones, pag.esInicio) }}
+      </div>
+      {%- if b.imagen %}
+      <div class="hero-portrait reveal">
+        <img src="{{ b.imagen }}" alt="{{ b.imagen_texto or b.titulo }}" class="portrait-img"{% if b.enfoque %} style="object-position:{{ b.enfoque }}"{% endif %}>
+      </div>
+      {%- endif %}
+    </div>
+  </section>

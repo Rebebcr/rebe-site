@@ -1,0 +1,22 @@
+{%- import "macros.njk" as m %}
+  <section class="section{{ m.fondo(b) }}"{{ m.id(b) }}>
+    <div class="container narrow{{ ' center' if b.alineacion == 'centro' }}">
+      {%- if b.etiqueta %}
+      <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+      {%- endif %}
+      {%- if b.titulo %}
+      <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+      {%- endif %}
+      {%- if b.intro %}
+      <p class="section-lead reveal">{{ b.intro }}</p>
+      {%- endif %}
+      <div class="video-box reveal{{ ' video-vertical' if b.formato == 'vertical' }}">
+        {%- set emb = b.enlace | videoEmbed %}
+        {%- if emb %}
+        <iframe src="{{ emb }}" title="{{ b.titulo or 'Video' }}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {%- elif b.archivo %}
+        <video controls preload="metadata" playsinline{% if b.portada %} poster="{{ b.portada }}"{% endif %}><source src="{{ b.archivo }}" type="video/mp4"></video>
+        {%- endif %}
+      </div>
+    </div>
+  </section>

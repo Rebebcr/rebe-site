@@ -1,0 +1,16 @@
+{%- import "macros.njk" as m %}
+  <section class="galeria section{{ m.fondo(b, 'alterno') }}"{{ m.id(b) }}>
+    <div class="container">
+      {%- if b.etiqueta %}
+      <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+      {%- endif %}
+      {%- if b.titulo %}
+      <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+      {%- endif %}
+      <div class="gallery-grid">
+        {%- for f in b.fotos %}
+        <img src="{{ f.imagen }}" alt="{{ f.descripcion }}" class="gallery-img reveal"{% if f.enfoque %} style="object-position:{{ f.enfoque }}"{% endif %}>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>

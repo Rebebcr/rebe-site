@@ -1,0 +1,17 @@
+{%- import "macros.njk" as m %}
+  <section class="page-head{{ ' has-img' if b.imagen }}"{{ m.id(b) }}>
+    {%- if b.imagen %}
+    <img src="{{ b.imagen }}" alt="" class="atmos-band-img" aria-hidden="true"{% if b.enfoque %} style="object-position:{{ b.enfoque }}"{% endif %}>
+    {%- endif %}
+    <div class="container{{ ' center' if b.alineacion == 'centro' }}">
+      {%- if b.etiqueta %}
+      <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+      {%- endif %}
+      <h1 class="page-title reveal">{{ b.titulo | titulo | safe }}</h1>
+      <div class="gold-line"></div>
+      {%- if b.subtitulo %}
+      <p class="section-lead reveal">{{ b.subtitulo }}</p>
+      {%- endif %}
+      {{ m.botones(b.botones, pag.esInicio) }}
+    </div>
+  </section>

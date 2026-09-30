@@ -1,0 +1,12 @@
+{%- import "macros.njk" as m %}
+  <section class="section section-tight{{ m.fondo(b) }}"{{ m.id(b) }}>
+    <div class="container{{ ' center' if b.alineacion != 'izquierda' }}">
+      {%- if b.titulo %}
+      <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+      {%- endif %}
+      {%- if b.intro %}
+      <p class="section-lead reveal">{{ b.intro }}</p>
+      {%- endif %}
+      {{ m.botones(b.botones, pag.esInicio, 'button-row') }}
+    </div>
+  </section>

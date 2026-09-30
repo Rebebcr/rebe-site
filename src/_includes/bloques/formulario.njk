@@ -1,0 +1,51 @@
+{%- import "macros.njk" as m %}
+{%- set nombreForm = (b.nombre_formulario or b.titulo or "formulario") | slugify %}
+{%- set tiposInput = {"correo": "email", "telefono": "tel", "fecha": "date", "numero": "number"} %}
+  <section class="section form-section{{ m.fondo(b) }}"{{ m.id(b) }}>
+    <div class="container narrow{{ ' center' if b.alineacion == 'centro' }}">
+      {%- if b.etiqueta %}
+      <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+      {%- endif %}
+      {%- if b.titulo %}
+      <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+      {%- endif %}
+      {%- if b.intro %}
+      <p class="section-lead reveal">{{ b.intro }}</p>
+      {%- endif %}
+      <form class="site-form reveal" name="{{ nombreForm }}" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+            data-exito="{{ b.mensaje_exito or '¡Gracias! Recibimos su mensaje y le responderemos pronto.' }}">
+        <input type="hidden" name="form-name" value="{{ nombreForm }}">
+        <p class="form-hp" hidden><label>No llenar este campo: <input name="bot-field"></label></p>
+        {%- for c in b.campos %}
+        {%- set nombreCampo = c.etiqueta | slugify %}
+        {%- set idCampo = nombreForm + "-" + nombreCampo %}
+        {%- if c.tipo == "casilla" %}
+        <label class="form-check">
+          <input type="checkbox" name="{{ nombreCampo }}" value="Sí"{% if c.obligatorio %} required{% endif %}>
+          <span>{{ c.etiqueta }}</span>
+        </label>
+        {%- else %}
+        <div class="form-field">
+          <label for="{{ idCampo }}">{{ c.etiqueta }}{% if c.obligatorio %} <span class="req" aria-hidden="true">*</span>{% endif %}</label>
+          {%- if c.tipo == "mensaje" %}
+          <textarea id="{{ idCampo }}" name="{{ nombreCampo }}" rows="5"{% if c.obligatorio %} required{% endif %}{% if c.ayuda %} placeholder="{{ c.ayuda }}"{% endif %}></textarea>
+          {%- elif c.tipo == "opciones" %}
+          <select id="{{ idCampo }}" name="{{ nombreCampo }}"{% if c.obligatorio %} required{% endif %}>
+            <option value="">{{ c.ayuda or "Seleccione una opción" }}</option>
+            {%- for o in c.opciones | lineas %}
+            <option>{{ o }}</option>
+            {%- endfor %}
+          </select>
+          {%- else %}
+          <input id="{{ idCampo }}" name="{{ nombreCampo }}" type="{{ tiposInput[c.tipo] or 'text' }}"{% if c.obligatorio %} required{% endif %}{% if c.ayuda %} placeholder="{{ c.ayuda }}"{% endif %}{% if c.tipo == 'correo' %} autocomplete="email"{% elif c.tipo == 'telefono' %} autocomplete="tel"{% endif %}>
+          {%- endif %}
+        </div>
+        {%- endif %}
+        {%- endfor %}
+        <div class="form-actions">
+          <button type="submit" class="btn btn-gold btn-lg">{{ b.boton_texto or "Enviar" }}</button>
+        </div>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>

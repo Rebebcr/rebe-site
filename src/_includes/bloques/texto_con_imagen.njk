@@ -1,0 +1,25 @@
+{%- import "macros.njk" as m %}
+  <section class="libro section{{ m.fondo(b) }}"{{ m.id(b) }}>
+    <div class="container split{{ ' split-img-left' if b.lado == 'izquierda' }}{{ ' no-media' if not b.imagen }}">
+      <div class="split-copy">
+        {%- if b.etiqueta %}
+        <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+        {%- endif %}
+        {%- if b.titulo %}
+        <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+        {%- endif %}
+        <div class="rich reveal">{{ b.texto | safe }}</div>
+        {%- if b.cita %}
+        <blockquote class="inline-quote reveal">
+          <p>{{ b.cita }}</p>
+        </blockquote>
+        {%- endif %}
+        {{ m.botones(b.botones, pag.esInicio) }}
+      </div>
+      {%- if b.imagen %}
+      <div class="split-media reveal">
+        <img src="{{ b.imagen }}" alt="{{ b.imagen_texto or b.titulo }}" class="{{ 'wide-img' if b.estilo_imagen == 'foto' else 'book-img' }}">
+      </div>
+      {%- endif %}
+    </div>
+  </section>

@@ -1,0 +1,23 @@
+{
+  "nombre_sitio": "Rebe Bustamante",
+  "dominio": "https://rebebcr.com",
+  "descripcion": "Rebe Bustamante — Especialista en desarrollo de Cultura Organizacional y liderazgo consciente y transformacional. Conferencias, capacitación corporativa, desarrollo de liderazgo y consultoría organizacional.",
+  "imagen_compartir": "/assets/rebe-bw.jpg",
+  "logo": "/assets/logo-rebe-light.png",
+  "logo_pie": "/assets/logo-rebe-light.png",
+  "icono": "/assets/logo-rebe.png",
+  "menu": [],
+  "boton_menu": {
+    "texto": "Contacto",
+    "enlace": "#contacto",
+    "nueva_pestana": false
+  },
+  "redes": [
+    { "red": "facebook", "enlace": "https://www.facebook.com/profile.php?id=61589663987737" },
+    { "red": "instagram", "enlace": "https://www.instagram.com/rebe_b_g/" },
+    { "red": "linkedin", "enlace": "https://www.linkedin.com/in/rebeca-bustamante-%F0%9F%87%A8%F0%9F%87%B7-a7463952/?skipRedirect=true" }
+  ],
+  "pie_texto": "© {año} Rebe Bustamante · rebebcr.com",
+  "codigo_head": "",
+  "codigo_body": ""
+}

@@ -1,0 +1,56 @@
+{%- import "macros.njk" as m %}
+  <section class="trayectoria section{{ m.fondo(b) }}"{{ m.id(b) }}>
+    <div class="container">
+      {%- if b.etiqueta %}
+      <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+      {%- endif %}
+      {%- if b.titulo %}
+      <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+      {%- endif %}
+
+      {%- if b.cifras and b.cifras.length %}
+      <div class="stats-grid">
+        {%- for c in b.cifras %}
+        <div class="stat reveal">
+          <span class="stat-num">{{ c.numero }}</span>
+          <span class="stat-label">{{ c.descripcion }}</span>
+        </div>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+      {%- if b.linea_referencias %}
+      <p class="refs-line reveal">{{ b.linea_referencias }}</p>
+      {%- endif %}
+
+      {%- if b.cita %}
+      <blockquote class="pull-quote reveal">
+        <p>{{ b.cita }}</p>
+      </blockquote>
+      {%- endif %}
+
+      {%- if b.imagen or b.credenciales %}
+      <div class="cred-layout{{ ' no-media' if not b.imagen }}">
+        {%- if b.imagen %}
+        <div class="cred-portrait reveal">
+          <img src="{{ b.imagen }}" alt="{{ b.imagen_texto }}" class="cred-graphic">
+        </div>
+        {%- endif %}
+      <div class="credentials reveal">
+        {%- if b.credenciales_titulo %}
+        <h3 class="serif">{{ b.credenciales_titulo }}</h3>
+        {%- endif %}
+        <div class="rich cred-rich">{{ b.credenciales | safe }}</div>
+      </div>
+      </div>
+      {%- endif %}
+
+      {%- if b.acreditacion_org %}
+      <div class="accreditation reveal">
+        <p class="accr-org">{{ b.acreditacion_org }}</p>
+        {%- if b.acreditacion_titulos %}
+        <p class="accr-titles">{{ b.acreditacion_titulos }}</p>
+        {%- endif %}
+      </div>
+      {%- endif %}
+    </div>
+  </section>

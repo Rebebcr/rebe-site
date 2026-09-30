@@ -1,0 +1,67 @@
+{%- import "macros.njk" as m %}
+  <section class="que-hace section{{ m.fondo(b) }}"{{ m.id(b) }}>
+    <div class="container">
+      <div class="quehace-layout{{ ' no-media' if not b.imagen }}">
+      <div class="quehace-text">
+      {%- if b.etiqueta %}
+      <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+      {%- endif %}
+      {%- if b.titulo %}
+      <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+      {%- endif %}
+      {%- if b.intro %}
+      <p class="section-lead reveal">{{ b.intro }}</p>
+      {%- endif %}
+
+      {%- if b.tarjetas and b.tarjetas.length %}
+      <div class="offer-grid">
+        {%- for t in b.tarjetas %}
+        {%- if t.enlace %}
+        <a class="card card-linked reveal" href="{{ t.enlace | enlace(pag.esInicio) }}"{% if t.enlace | esExterno %} target="_blank" rel="noopener"{% endif %}>
+        {%- else %}
+        <article class="card reveal">
+        {%- endif %}
+          {%- if b.numerar !== false %}
+          <span class="card-num">{{ "0" if loop.index < 10 }}{{ loop.index }}</span>
+          {%- endif %}
+          <h3>{{ t.titulo }}</h3>
+          <p>{{ t.texto }}</p>
+          {%- if t.enlace %}
+          <span class="card-link">{{ t.texto_enlace or "Conocer más" }} →</span>
+        </a>
+          {%- else %}
+        </article>
+          {%- endif %}
+        {%- endfor %}
+      </div>
+      {%- endif %}
+      {%- if b.frase_hilo %}
+      <p class="offer-thread serif-italic reveal">{{ b.frase_hilo }}</p>
+      {%- endif %}
+
+      {%- if b.filosofia_titulo or (b.filosofia_citas and b.filosofia_citas.length) %}
+      <div class="philosophy reveal">
+        {%- if b.filosofia_titulo %}
+        <h3 class="serif">{{ b.filosofia_titulo }}</h3>
+        {%- endif %}
+        {%- for c in b.filosofia_citas %}
+        <blockquote class="pull-quote">
+          <p>{{ c }}</p>
+        </blockquote>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+
+      {%- if b.nota %}
+      <div class="backdrop-note rich reveal">{{ b.nota | safe }}</div>
+      {%- endif %}
+      </div>
+
+      {%- if b.imagen %}
+      <aside class="quehace-media reveal">
+        <img src="{{ b.imagen }}" alt="{{ b.imagen_texto or b.titulo }}" class="quehace-img">
+      </aside>
+      {%- endif %}
+      </div>
+    </div>
+  </section>

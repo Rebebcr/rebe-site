@@ -1,0 +1,36 @@
+{%- import "macros.njk" as m %}
+  <section class="contacto section"{{ m.id(b) }}>
+    <div class="container narrow center">
+      {%- if b.imagen %}
+      <img src="{{ b.imagen }}" alt="{{ ajustes.nombre_sitio }}" class="round-img reveal"{% if b.enfoque %} style="object-position:{{ b.enfoque }}"{% endif %}>
+      {%- endif %}
+      {%- if b.cita %}
+      <blockquote class="pull-quote centered reveal">
+        <p>{{ b.cita }}</p>
+      </blockquote>
+      {%- endif %}
+      {%- if b.titulo %}
+      <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+      {%- endif %}
+      {%- if b.intro %}
+      <p class="contact-lead reveal">{{ b.intro }}</p>
+      {%- endif %}
+      <div class="contact-actions reveal">
+        {%- if b.whatsapp %}
+        <a href="https://wa.me/{{ b.whatsapp | digitos }}{% if b.whatsapp_mensaje %}?text={{ b.whatsapp_mensaje | urlencode }}{% endif %}" class="btn btn-gold btn-lg" target="_blank" rel="noopener">
+          {% include "icono-whatsapp-boton.njk" %}
+          {{ b.whatsapp_texto or "Escribir por WhatsApp" }}
+        </a>
+        {%- endif %}
+        {%- if b.correo %}
+        <a href="mailto:{{ b.correo }}" class="btn btn-outline btn-lg">
+          {% include "icono-correo-boton.njk" %}
+          {{ b.correo_texto or "Enviar un correo" }}
+        </a>
+        {%- endif %}
+      </div>
+      {%- if b.detalle %}
+      <p class="contact-detail reveal">{{ b.detalle }}</p>
+      {%- endif %}
+    </div>
+  </section>

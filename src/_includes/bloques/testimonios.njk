@@ -1,0 +1,46 @@
+{%- import "macros.njk" as m %}
+  <section class="testimonials section{{ m.fondo(b, 'alterno') }}"{{ m.id(b) }}>
+    <div class="container">
+      {%- if b.etiqueta %}
+      <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+      {%- endif %}
+      {%- if b.titulo %}
+      <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+      {%- endif %}
+      {%- if b.intro %}
+      <p class="section-lead reveal">{{ b.intro }}</p>
+      {%- endif %}
+      {%- if b.videos and b.videos.length %}
+      <div class="testimonial-grid">
+        {%- for v in b.videos %}
+        <figure class="testimonial-video reveal">
+          {%- set emb = v.enlace | videoEmbed %}
+          {%- if emb %}
+          <iframe src="{{ emb }}" title="{{ v.descripcion or 'Testimonio en video' }}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          {%- elif v.video %}
+          <video controls preload="metadata" playsinline{% if v.portada or b.portada %} poster="{{ v.portada or b.portada }}"{% endif %}>
+            <source src="{{ v.video }}" type="video/mp4">
+          </video>
+          {%- endif %}
+          <figcaption>{{ v.descripcion or "Testimonio en video" }}</figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+      {%- if b.escritos and b.escritos.length %}
+      <div class="testimonial-grid">
+        {%- for t in b.escritos %}
+        <figure class="testimonial-card reveal">
+          <blockquote><p>«{{ t.texto }}»</p></blockquote>
+          <figcaption>
+            <strong>{{ t.nombre }}</strong>
+            {%- if t.cargo %}
+            <span>{{ t.cargo }}</span>
+            {%- endif %}
+          </figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </div>
+  </section>

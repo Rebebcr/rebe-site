@@ -1,0 +1,30 @@
+{%- import "macros.njk" as m %}
+  <section class="medios section{{ m.fondo(b, 'alterno') }}"{{ m.id(b) }}>
+    <div class="container">
+      {%- if b.etiqueta %}
+      <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+      {%- endif %}
+      {%- if b.titulo %}
+      <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+      {%- endif %}
+      <div class="media-strip">
+        {%- for r in b.items %}
+        {%- if r.enlace %}
+        <a class="media-item reveal" href="{{ r.enlace | enlace(pag.esInicio) }}"{% if r.enlace | esExterno %} target="_blank" rel="noopener"{% endif %}>
+        {%- else %}
+        <div class="media-item reveal">
+        {%- endif %}
+          {%- if r.logo %}
+          <img src="{{ r.logo }}" alt="{{ r.nombre }}" class="media-logo">
+          {%- endif %}
+          <span class="media-kind">{{ r.tipo }}</span>
+          <span class="media-name serif">{{ r.nombre }}</span>
+        {%- if r.enlace %}
+        </a>
+        {%- else %}
+        </div>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+    </div>
+  </section>

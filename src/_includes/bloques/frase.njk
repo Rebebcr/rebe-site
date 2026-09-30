@@ -1,0 +1,14 @@
+{%- import "macros.njk" as m %}
+  <section class="atmos-band{{ ' atmos-plain' if not b.imagen }}"{{ m.id(b) }}>
+    {%- if b.imagen %}
+    <img src="{{ b.imagen }}" alt="" class="atmos-band-img" aria-hidden="true"{% if b.enfoque %} style="object-position:{{ b.enfoque }}"{% endif %}>
+    {%- endif %}
+    <div class="container narrow">
+      <blockquote class="big-quote reveal">
+        <p>{{ b.frase }}</p>
+        {%- if b.autor %}
+        <cite class="big-quote-cite">— {{ b.autor }}</cite>
+        {%- endif %}
+      </blockquote>
+    </div>
+  </section>

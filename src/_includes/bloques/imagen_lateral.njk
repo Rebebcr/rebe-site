@@ -1,0 +1,26 @@
+{%- import "macros.njk" as m %}
+{%- set lado = 'right' if b.lado == 'derecha' else 'left' %}
+  <section class="section{{ m.fondo(b, 'alterno') }} side-atmos media-{{ lado }}"{{ m.id(b) }}>
+    {%- if b.imagen %}
+    <div class="side-atmos-media {{ lado }}" aria-hidden="true">
+      <img src="{{ b.imagen }}" alt=""{% if b.enfoque %} style="object-position:{{ b.enfoque }}"{% endif %}>
+    </div>
+    {%- endif %}
+    <div class="container">
+      <div class="side-atmos-copy">
+        {%- if b.etiqueta %}
+        <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+        {%- endif %}
+        {%- if b.titulo %}
+        <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+        {%- endif %}
+        <div class="rich reveal">{{ b.texto | safe }}</div>
+        {%- if b.cita %}
+        <blockquote class="inline-quote reveal">
+          <p>{{ b.cita }}</p>
+        </blockquote>
+        {%- endif %}
+        {{ m.botones(b.botones, pag.esInicio) }}
+      </div>
+    </div>
+  </section>

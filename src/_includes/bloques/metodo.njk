@@ -1,0 +1,22 @@
+{%- import "macros.njk" as m %}
+  <section class="programas section{{ m.fondo(b, 'alterno') }}"{{ m.id(b) }}>
+    <div class="container">
+      <div class="mariposa">
+        <div class="mariposa-head reveal">
+          {%- if b.etiqueta %}
+          <p class="eyebrow">{{ b.etiqueta }}</p>
+          {%- endif %}
+          <h3 class="serif">{{ b.titulo | titulo | safe }}</h3>
+          {%- if b.intro %}
+          <p class="mariposa-intro">{{ b.intro }}</p>
+          {%- endif %}
+        </div>
+        <ol class="mariposa-steps">
+          {%- for p in b.pasos %}
+          <li class="reveal"><span class="m-letter">{{ p.letra }}</span><div class="m-body"><h4>{{ p.titulo }}</h4><p>{{ p.texto }}</p></div></li>
+          {%- endfor %}
+        </ol>
+        {{ m.botones(b.botones, pag.esInicio) }}
+      </div>
+    </div>
+  </section>

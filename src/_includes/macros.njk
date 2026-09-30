@@ -1,0 +1,26 @@
+{# id de la sección (para enlazar con #ancla desde el menú o un botón) #}
+{%- macro id(b) -%}
+{%- if b.ancla %} id="{{ b.ancla | slugify }}"{% endif -%}
+{%- endmacro %}
+
+{# clase de fondo: "alterno" = azul un poco más claro #}
+{%- macro fondo(b, porDefecto) -%}
+{%- set f = b.fondo or porDefecto -%}
+{%- if f == "alterno" %} section-alt{% elif f == "negro" %} section-quote{% endif -%}
+{%- endmacro %}
+
+{%- macro boton(bt, esInicio, grande) -%}
+{%- if bt and bt.texto -%}
+<a href="{{ bt.enlace | enlace(esInicio) }}" class="btn {{ 'btn-outline' if bt.estilo == 'contorno' else 'btn-gold' }}{{ ' btn-lg' if grande }}"{% if bt.nueva_pestana or (bt.enlace | esExterno) %} target="_blank" rel="noopener"{% endif %}>{{ bt.texto }}</a>
+{%- endif -%}
+{%- endmacro %}
+
+{%- macro botones(lista, esInicio, clase) -%}
+{%- if lista and lista.length -%}
+<div class="{{ clase or 'hero-actions' }} reveal">
+  {%- for bt in lista %}
+  {{ boton(bt, esInicio, true) }}
+  {%- endfor %}
+</div>
+{%- endif -%}
+{%- endmacro %}

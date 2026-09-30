@@ -1,0 +1,13 @@
+---
+pagination:
+  data: paginas
+  size: 1
+  alias: pag
+permalink: "{{ pag.url }}"
+layout: base.njk
+---
+{%- for b in pag.secciones %}
+{%- if b.visible !== false %}
+{% include "bloques/" + b._block + ".njk" ignore missing %}
+{%- endif %}
+{%- endfor %}

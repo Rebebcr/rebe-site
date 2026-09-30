@@ -1,0 +1,17 @@
+{%- import "macros.njk" as m %}
+  <section class="section{{ m.fondo(b) }}"{{ m.id(b) }}>
+    <div class="container{{ ' narrow' if b.ancho != 'amplio' }}{{ ' center' if b.alineacion == 'centro' }}">
+      {%- if b.etiqueta %}
+      <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+      {%- endif %}
+      {%- if b.titulo %}
+      <h2 class="serif reveal">{{ b.titulo | titulo | safe }}</h2>
+      {%- endif %}
+      {%- if b.intro %}
+      <p class="section-lead reveal">{{ b.intro }}</p>
+      {%- endif %}
+      <div class="embed-box">
+        {{ b.codigo | safe }}
+      </div>
+    </div>
+  </section>

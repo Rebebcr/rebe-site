@@ -1,0 +1,47 @@
+{%- import "macros.njk" as m %}
+  <section class="manifesto section"{{ m.id(b) }}>
+    <div class="container">
+      <div class="manifesto-layout{{ ' no-rail' if not (b.imagenes and b.imagenes.length) }}">
+        <div class="manifesto-text">
+          {%- if b.etiqueta %}
+          <p class="eyebrow reveal">{{ b.etiqueta }}</p>
+          {%- endif %}
+          {%- if b.cita %}
+          <blockquote class="pull-quote reveal">
+            <p>{{ b.cita }}</p>
+            {%- if b.cita_autor %}
+            <cite>— {{ b.cita_autor }}</cite>
+            {%- endif %}
+          </blockquote>
+          {%- endif %}
+          {%- if b.titulo %}
+          <h2 class="manifesto-lines serif reveal">{{ b.titulo | titulo | safe }}</h2>
+          {%- endif %}
+          {%- if b.texto %}
+          <div class="rich manifesto-rich reveal">{{ b.texto | safe }}</div>
+          {%- endif %}
+          {%- if b.destacado_titulo or b.destacado %}
+          <div class="manifesto-despertar reveal">
+            {%- if b.destacado_titulo %}
+            <p class="md-lead serif-italic">{{ b.destacado_titulo }}</p>
+            {%- endif %}
+            <div class="rich">{{ b.destacado | safe }}</div>
+          </div>
+          {%- endif %}
+          {%- if b.texto_final %}
+          <div class="rich manifesto-rich reveal">{{ b.texto_final | safe }}</div>
+          {%- endif %}
+          {%- if b.cierre %}
+          <p class="manifesto-close serif-italic reveal">{{ b.cierre }}</p>
+          {%- endif %}
+        </div>
+        {%- if b.imagenes and b.imagenes.length %}
+        <aside class="manifesto-rail">
+          {%- for img in b.imagenes %}
+          <img src="{{ img }}" alt="{{ b.imagen_texto or ajustes.nombre_sitio }}" class="portrait-img reveal">
+          {%- endfor %}
+        </aside>
+        {%- endif %}
+      </div>
+    </div>
+  </section>

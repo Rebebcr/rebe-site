@@ -1,7 +1,26 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const leerJSON = (archivo) => JSON.parse(fs.readFileSync(archivo, "utf8"));
+// Si alguien rompe un archivo al editarlo en GitHub, el error dice en español
+// qué archivo y qué línea revisar (Netlify no publica y deja el sitio anterior).
+const leerJSON = (archivo) => {
+  const texto = fs.readFileSync(archivo, "utf8");
+  try {
+    return JSON.parse(texto);
+  } catch (e) {
+    const lineaDirecta = (e.message.match(/line (\d+)/) || [])[1];
+    let pos = Number((e.message.match(/position (\d+)/) || [])[1]);
+    const fragmento = (e.message.match(/\.\.\."([\s\S]+?)"\.\.\./) || e.message.match(/"([\s\S]{8,}?)" is not valid/) || [])[1];
+    if (Number.isNaN(pos) && fragmento) pos = texto.indexOf(fragmento);
+    const linea = lineaDirecta || (pos >= 0 && !Number.isNaN(pos) ? texto.slice(0, pos).split("\n").length : "?");
+    throw new Error(
+      `\n\n*** ERROR EN ${archivo}, cerca de la línea ${linea} ***\n` +
+      `Revise que cada texto esté entre comillas "así", que haya una coma entre elementos\n` +
+      `y que no se haya borrado ninguna llave { } o corchete [ ].\n` +
+      `El sitio publicado NO cambió. Detalle técnico: ${e.message}\n`
+    );
+  }
+};
 
 const escapar = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");

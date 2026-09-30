@@ -76,6 +76,9 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("anio", () => new Date().getFullYear());
 
+  // Versión publicada (Netlify pone el commit en COMMIT_REF) — sirve para verificar que se publicó
+  eleventyConfig.addGlobalData("version", () => (process.env.COMMIT_REF || "local").slice(0, 7));
+
   return {
     dir: { input: "src", output: "_site", includes: "_includes" },
     templateFormats: ["njk"],

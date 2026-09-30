@@ -10,7 +10,7 @@ Todo el contenido del sitio está en la carpeta **`content/`**. Cuando usted gua
 | `assets/` | Fotos y videos. |
 
 ## Cambiar un texto
-1. Entre a **github.com/mattpb071/rebe-site** (con su cuenta de GitHub).
+1. Entre a **github.com/Rebebcr/rebe-site** (con su cuenta de GitHub).
 2. Abra la carpeta `content` y el archivo (por ejemplo `inicio.json`).
 3. Toque el **lápiz** ✏️ (arriba a la derecha, «Edit this file»).
 4. Busque el texto con **Ctrl + F** y cámbielo. **Solo cambie lo que está entre comillas** después de los dos puntos:
@@ -137,6 +137,17 @@ Al pegar el código, cambie cada `"` del código por `'` (comilla simple), o pí
 }
 ```
 4. **Commit changes**. Para que aparezca en el menú: en `content/ajustes.json`, dentro de `"menu": [ ]`, agregue `{ "texto": "Talleres", "enlace": "/talleres/" }`.
+
+## Dar acceso a otra persona
+La persona necesita una cuenta gratis de GitHub (github.com/signup).
+1. Entre a **github.com/Rebebcr/rebe-site** → **Settings** (arriba) → **Collaborators and teams** (menú izquierdo).
+2. Toque **Add people**, escriba el usuario o correo de GitHub de la persona.
+3. Elija el permiso **Write** (puede editar) → **Add**.
+4. A la persona le llega una invitación por correo (o en github.com/notifications). Cuando la acepta, ya puede editar como usted. Envíele esta guía.
+
+**Quitar el acceso:** mismo lugar → al lado del nombre, **Remove**.
+
+> Dé **Write**, no **Admin**: con Admin la persona podría borrar el proyecto o quitarle el acceso a otros.
 
 ## Si algo sale mal
 Nada se pierde: GitHub guarda todas las versiones. Avísele a Mateo y se vuelve a la anterior en un minuto.
